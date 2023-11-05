@@ -10,7 +10,7 @@ const IconButton = ({ icon, onClick, className }: iIconButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`flex rounded-md transition duration-200 ease-in-out hover:scale-110 ${className}`}
+      className={`flex rounded-md transition duration-200 ease-in-out hover:scale-105 ${className}`}
     >
       {icon}
     </button>
