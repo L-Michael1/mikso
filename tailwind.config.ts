@@ -3,11 +3,7 @@ import { type Config } from "tailwindcss";
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
-    extend: {
-      fontFamily: {
-        satoshi: ["Satoshi", "sans-serif"],
-      },
-    },
+    extend: {},
   },
   darkMode: "class",
   plugins: [],
