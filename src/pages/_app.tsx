@@ -6,7 +6,11 @@ import NextNProgress from "nextjs-progressbar";
 
 import { api } from "~/utils/api";
 
+import { Inter } from "next/font/google";
 import "~/styles/globals.css";
+
+// Variable font
+const inter = Inter({ subsets: ["latin"] });
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -19,7 +23,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
           color={"#a1a1aa"}
           options={{ showSpinner: false, easing: "ease" }}
         />
-        <Component {...pageProps} />
+        <main className={inter.className}>
+          <Component {...pageProps} />
+        </main>
       </ThemeProvider>
     </SessionProvider>
   );
