@@ -6,10 +6,17 @@ type WindowDimensionsProps = {
 };
 
 const getWindowDimensions = (): WindowDimensionsProps => {
-  const { innerWidth, innerHeight } = window;
+  if (typeof window !== "undefined") {
+    const { innerWidth, innerHeight } = window;
+    return {
+      width: innerWidth,
+      height: innerHeight,
+    };
+  }
+
   return {
-    width: innerWidth,
-    height: innerHeight,
+    width: 0,
+    height: 0,
   };
 };
 

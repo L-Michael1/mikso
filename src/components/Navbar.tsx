@@ -40,7 +40,25 @@ const Navbar = () => {
         )}
       </div>
 
-      {width >= 640 ? (
+      {mounted && width < 640 ? (
+        <div className="flex">
+          <>
+            <a href="https://github.com/L-Michael1" target="_blank">
+              <IconButton className="m-2 my-8" icon={<FiGithub size={24} />} />
+            </a>
+            <IconButton
+              className="m-2 my-8"
+              icon={
+                theme === "dark" ? <GoSun size={24} /> : <GoMoon size={24} />
+              }
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          </>
+          <div className="my-7">
+            <MobiNav />
+          </div>
+        </div>
+      ) : (
         <div className="flex">
           {links.map((link) => {
             return (
@@ -71,29 +89,6 @@ const Navbar = () => {
                 />
               </>
             )}
-          </div>
-        </div>
-      ) : (
-        <div className="flex">
-          {mounted && (
-            <>
-              <a href="https://github.com/L-Michael1" target="_blank">
-                <IconButton
-                  className="m-2 my-8"
-                  icon={<FiGithub size={24} />}
-                />
-              </a>
-              <IconButton
-                className="m-2 my-8"
-                icon={
-                  theme === "dark" ? <GoSun size={24} /> : <GoMoon size={24} />
-                }
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              />
-            </>
-          )}
-          <div className="my-7">
-            <MobiNav />
           </div>
         </div>
       )}
