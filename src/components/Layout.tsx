@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 interface iLayoutProps {
   children: React.ReactNode;
@@ -23,9 +25,9 @@ const Layout = ({ children, description, icon }: iLayoutProps) => {
         {icon && <link rel="icon" href={icon} />}
       </Head>
       <main>
-        {/* <Navbar /> */}
-        <div className="mx-auto">{children}</div>
-        {/* <Footer /> */}
+        <Navbar />
+        <div className="mx-auto max-w-7xl">{children}</div>
+        <Footer />
       </main>
     </>
   );
