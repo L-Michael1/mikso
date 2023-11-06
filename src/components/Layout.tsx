@@ -31,7 +31,7 @@ const Layout = ({ children, description, icon }: iLayoutProps) => {
       <main className="flex min-h-screen flex-col items-center bg-zinc-100 dark:bg-zinc-900">
         <Navbar />
         <div className="mx-auto max-w-2xl">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
