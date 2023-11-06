@@ -17,12 +17,16 @@ const Layout = ({ children, description, icon }: iLayoutProps) => {
     <>
       <Head>
         <title>
-          {currentRoute === "/" ? "mikso" : `mikso // ${currentRoute.slice(1)}`}
+          {currentRoute === "/" ? "mikso" : `mikso / ${currentRoute.slice(1)}`}
         </title>
         <meta name="description" content={description} />
         <meta name="author" content="Michael Lam" />
         <meta name="keywords" content="mikso, nextjs, t3, portfolio" />
-        {icon && <link rel="icon" href={icon} />}
+        {icon ? (
+          <link rel="icon" href={icon} />
+        ) : (
+          <link rel="icon" href="/mikso_transparent.png" />
+        )}
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-zinc-100 dark:bg-zinc-900">
         <Navbar />
