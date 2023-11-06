@@ -3,16 +3,34 @@ import { useTheme } from "next-themes";
 import IconButton from "~/components/ui/IconButton";
 import { GoMoon, GoSun } from "react-icons/go";
 import { FiGithub } from "react-icons/fi";
+import { AiOutlineLinkedin, AiOutlineMail } from "react-icons/ai";
 import LinkRoute from "./ui/LinkRoute";
 import Link from "next/link";
 import Image from "next/image";
 import MobiNav from "./MobiNav";
 import useWindowDimensions from "~/hooks/useWindowDimensions";
 
-const links = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+export const links = [
+  { name: "About", href: "/" },
   { name: "Projects", href: "/projects" },
+];
+
+const iconLinks = [
+  {
+    className: "m-2 my-8",
+    href: "https://github.com/L-Michael1",
+    icon: <FiGithub size={24} />,
+  },
+  {
+    className: "m-2 my-8",
+    href: "https://www.linkedin.com/in/mlam11/",
+    icon: <AiOutlineLinkedin size={24} />,
+  },
+  {
+    className: "m-2 my-8",
+    href: "mailto:m.lam08@outlook.com",
+    icon: <AiOutlineMail size={24} />,
+  },
 ];
 
 const Navbar = () => {
@@ -43,9 +61,13 @@ const Navbar = () => {
       {mounted && width < 640 ? (
         <div className="flex">
           <>
-            <a href="https://github.com/L-Michael1" target="_blank">
-              <IconButton className="m-2 my-8" icon={<FiGithub size={24} />} />
-            </a>
+            {iconLinks.map((icon) => {
+              return (
+                <a key={icon.href} href={icon.href} target="_blank">
+                  <IconButton className={icon.className} icon={icon.icon} />
+                </a>
+              );
+            })}
             <IconButton
               className="m-2 my-8"
               icon={
@@ -70,12 +92,13 @@ const Navbar = () => {
           <div className="flex">
             {mounted && (
               <>
-                <a href="https://github.com/L-Michael1" target="_blank">
-                  <IconButton
-                    className="m-2 my-8"
-                    icon={<FiGithub size={24} />}
-                  />
-                </a>
+                {iconLinks.map((icon) => {
+                  return (
+                    <a key={icon.href} href={icon.href} target="_blank">
+                      <IconButton className={icon.className} icon={icon.icon} />
+                    </a>
+                  );
+                })}
                 <IconButton
                   className="m-2 my-8"
                   icon={
