@@ -17,17 +17,14 @@ export const links = [
 
 const iconLinks = [
   {
-    className: "m-2 my-8",
     href: "https://github.com/L-Michael1",
     icon: <FiGithub size={24} />,
   },
   {
-    className: "m-2 my-8",
     href: "https://www.linkedin.com/in/mlam11/",
     icon: <AiOutlineLinkedin size={24} />,
   },
   {
-    className: "m-2 my-8",
     href: "mailto:m.lam08@outlook.com",
     icon: <AiOutlineMail size={24} />,
   },
@@ -64,7 +61,7 @@ const Navbar = () => {
             {iconLinks.map((icon) => {
               return (
                 <a key={icon.href} href={icon.href} target="_blank">
-                  <IconButton className={icon.className} icon={icon.icon} />
+                  <IconButton className="m-2 my-8" icon={icon.icon} />
                 </a>
               );
             })}
@@ -95,7 +92,7 @@ const Navbar = () => {
                 {iconLinks.map((icon) => {
                   return (
                     <a key={icon.href} href={icon.href} target="_blank">
-                      <IconButton className={icon.className} icon={icon.icon} />
+                      <IconButton className="m-2 my-8" icon={icon.icon} />
                     </a>
                   );
                 })}
