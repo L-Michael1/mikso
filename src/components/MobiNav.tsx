@@ -2,9 +2,10 @@ import { Listbox, Transition } from "@headlessui/react";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
 import { BiMenu } from "react-icons/bi";
-import { links } from "./Navbar";
+import { links } from "~/global/constants";
 
 const MobiNav = () => {
+  console.log(links);
   const [option, setOption] = useState(links[0]);
   return (
     <Listbox value={option} onChange={setOption}>
@@ -21,7 +22,7 @@ const MobiNav = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute right-0 max-h-60 overflow-auto rounded-md py-1 shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-zinc-100">
+          <Listbox.Options className="absolute right-0 z-10 max-h-60 overflow-auto rounded-md py-1 shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-zinc-100">
             {links.map((link, linkIdx) => (
               <Link key={linkIdx} href={link.href}>
                 <Listbox.Option
