@@ -9,11 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MobiNav from "./MobiNav";
 import useWindowDimensions from "~/hooks/useWindowDimensions";
-
-export const links = [
-  { name: "About", href: "/" },
-  { name: "Projects", href: "/projects" },
-];
+import { links } from "~/global/constants";
 
 const iconLinks = [
   {
