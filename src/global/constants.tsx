@@ -128,3 +128,43 @@ export const tools: iSkillProps[] = [
     icon: <SiJira size={24} />,
   },
 ];
+
+export const projects = [
+  {
+    title: "droprr",
+    link: "https://github.com/L-Michael1/droprr",
+    description:
+      "Amazon product price tracker - notifies user's on price drops",
+    logoSrc: "/droprr.png",
+  },
+  {
+    title: "clinote",
+    link: "https://github.com/L-Michael1/clinote",
+    description: "TUI notes manager to read, edit, and add notes in style",
+    logoSrc: "/clinote.png",
+  },
+  {
+    title: "mikso",
+    link: "https://github.com/L-Michael1/mikso",
+    description: "Personal website",
+    logoSrc: "/mikso.png",
+  },
+  {
+    title: "CourseClub",
+    link: "https://github.com/L-Michael1/CourseClub",
+    description: "University of Guelph Course Scheduler",
+    logoSrc: "/courseclub.png",
+  },
+  {
+    title: "m-bot",
+    link: "https://github.com/L-Michael1/m-bot",
+    description: "A fun little Discord bot",
+    logoSrc: "/mbot.png",
+  },
+  {
+    title: "Dogedex",
+    link: "https://github.com/L-Michael1/Dogedex",
+    description: "Detect dog breeds by uploading an image",
+    logoSrc: "/dogedex.png",
+  },
+];
