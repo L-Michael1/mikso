@@ -82,9 +82,7 @@ const Navbar = () => {
             })}
             <IconButton
               className="m-2 my-8"
-              icon={
-                theme === "dark" ? <GoSun size={24} /> : <GoMoon size={24} />
-              }
+              icon={iconSrc}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             />
           </>
