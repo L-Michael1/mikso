@@ -25,7 +25,7 @@ const Layout = ({ children, description, icon }: iLayoutProps) => {
         {icon ? (
           <link rel="icon" href={icon} />
         ) : (
-          <link rel="icon" href="/mikso_transparent.png" />
+          <link rel="icon" href="/transparent_logo.png" />
         )}
       </Head>
       <main className="min-h-screen bg-zinc-100 dark:bg-zinc-900">

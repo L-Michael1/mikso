@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 interface iUpProps {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 }
 
-const Up = ({ children, delay }: iUpProps) => {
+const Up = ({ children, delay, className }: iUpProps) => {
   return (
     <motion.div
       initial={{ y: 10, opacity: 0 }}
@@ -15,6 +16,7 @@ const Up = ({ children, delay }: iUpProps) => {
         duration: 0.4,
         delay: delay,
       }}
+      className={`${className}`}
     >
       {children}
     </motion.div>
