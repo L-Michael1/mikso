@@ -28,6 +28,7 @@ const iconLinks = [
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   const { width } = useWindowDimensions();
 
@@ -35,13 +36,31 @@ const Navbar = () => {
     setMounted(true);
   }, []);
 
+  let imgSrc;
+  let iconSrc;
+
+  switch (resolvedTheme) {
+    case "light":
+      imgSrc = "/mikso_light.png";
+      iconSrc = <GoSun size={24} />;
+      break;
+    case "dark":
+      imgSrc = "/mikso_dark.png";
+      iconSrc = <GoMoon size={24} />;
+      break;
+    default:
+      imgSrc = "";
+      iconSrc = "";
+      break;
+  }
+
   return (
     <nav className="flex w-full justify-between px-6 sm:px-12">
       <div className="my-auto">
         {mounted && (
           <Link href="/">
             <Image
-              src={theme === "dark" ? "/mikso_dark.png" : "/mikso_light.png"}
+              src={imgSrc}
               alt="Mikso"
               width={500}
               height={500}
@@ -63,9 +82,7 @@ const Navbar = () => {
             })}
             <IconButton
               className="m-2 my-8"
-              icon={
-                theme === "dark" ? <GoSun size={24} /> : <GoMoon size={24} />
-              }
+              icon={iconSrc}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             />
           </>
@@ -94,13 +111,7 @@ const Navbar = () => {
                 })}
                 <IconButton
                   className="m-2 my-8"
-                  icon={
-                    theme === "dark" ? (
-                      <GoSun size={24} />
-                    ) : (
-                      <GoMoon size={24} />
-                    )
-                  }
+                  icon={iconSrc}
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 />
               </>
