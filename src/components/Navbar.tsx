@@ -42,11 +42,11 @@ const Navbar = () => {
   switch (resolvedTheme) {
     case "light":
       imgSrc = "/mikso_light.png";
-      iconSrc = <GoSun size={24} />;
+      iconSrc = <GoMoon size={24} />;
       break;
     case "dark":
       imgSrc = "/mikso_dark.png";
-      iconSrc = <GoMoon size={24} />;
+      iconSrc = <GoSun size={24} />;
       break;
     default:
       imgSrc = "";
