@@ -32,6 +32,13 @@ const Navbar = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { width } = useWindowDimensions();
 
+  const handleSetTheme = () => {
+    console.log(
+      "Debug: setting theme to " + (theme === "dark" ? "light" : "dark"),
+    );
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -83,7 +90,7 @@ const Navbar = () => {
             <IconButton
               className="m-2 my-8"
               icon={iconSrc}
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={handleSetTheme}
             />
           </>
           <div className="my-7">
@@ -112,7 +119,7 @@ const Navbar = () => {
                 <IconButton
                   className="m-2 my-8"
                   icon={iconSrc}
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  onClick={handleSetTheme}
                 />
               </>
             )}
