@@ -5,7 +5,6 @@ import { BiMenu } from "react-icons/bi";
 import { links } from "~/global/constants";
 
 const MobiNav = () => {
-  console.log(links);
   const [option, setOption] = useState(links[0]);
   return (
     <Listbox value={option} onChange={setOption}>

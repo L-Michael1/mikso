@@ -15,8 +15,6 @@ const ProjectCard = ({
   description,
   logoSrc = "/transparent_logo.png",
 }: iProjectCardProps) => {
-  console.log(title);
-
   return (
     <Link
       href={link}
