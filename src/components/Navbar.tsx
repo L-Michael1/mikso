@@ -33,6 +33,7 @@ const Navbar = () => {
   const { width } = useWindowDimensions();
 
   const handleSetTheme = () => {
+    console.log("Debug: theme is " + theme);
     console.log(
       "Debug: setting theme to " + (theme === "dark" ? "light" : "dark"),
     );
