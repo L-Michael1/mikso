@@ -28,17 +28,8 @@ const iconLinks = [
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   const { width } = useWindowDimensions();
-
-  const handleSetTheme = () => {
-    console.log("Debug: theme is " + theme);
-    console.log(
-      "Debug: setting theme to " + (theme === "dark" ? "light" : "dark"),
-    );
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   useEffect(() => {
     setMounted(true);
@@ -47,7 +38,7 @@ const Navbar = () => {
   let imgSrc;
   let iconSrc;
 
-  switch (resolvedTheme) {
+  switch (theme) {
     case "light":
       imgSrc = "/mikso_light.png";
       iconSrc = <GoMoon size={24} />;
@@ -91,7 +82,7 @@ const Navbar = () => {
             <IconButton
               className="m-2 my-8"
               icon={iconSrc}
-              onClick={handleSetTheme}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             />
           </>
           <div className="my-7">
@@ -120,7 +111,7 @@ const Navbar = () => {
                 <IconButton
                   className="m-2 my-8"
                   icon={iconSrc}
-                  onClick={handleSetTheme}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 />
               </>
             )}
