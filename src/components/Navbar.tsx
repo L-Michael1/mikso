@@ -28,7 +28,6 @@ const iconLinks = [
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   const { width } = useWindowDimensions();
 
@@ -39,7 +38,7 @@ const Navbar = () => {
   let imgSrc;
   let iconSrc;
 
-  switch (resolvedTheme) {
+  switch (theme) {
     case "light":
       imgSrc = "/mikso_light.png";
       iconSrc = <GoMoon size={24} />;
