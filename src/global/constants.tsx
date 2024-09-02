@@ -21,6 +21,7 @@ import {
   BiGitBranch,
   BiLogoGithub,
   BiLogoGitlab,
+  BiLogoPython,
 } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -36,6 +37,10 @@ export const languages: iSkillProps[] = [
   {
     name: "TypeScript",
     icon: <TbBrandTypescript size={24} />,
+  },
+  {
+    name: "Python",
+    icon: <BiLogoPython size={24} />,
   },
   {
     name: "C/C++",
