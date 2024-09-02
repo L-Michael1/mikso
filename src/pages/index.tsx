@@ -36,11 +36,10 @@ const Home = () => {
           </Up>
           <Up delay={0.5}>
             <p className="my-6">
-              I&apos;m in my last year studying Computer Science @ the
-              University of Guelph. Passionate about full-stack development,
-              hoping one day I can create software to help others. My current
-              favourite stack is the T3 stack (Next.js, TypeScript, tRPC,
-              TailwindCSS, Prisma).
+              I&apos;m a recent Computer Science graduate from the University of
+              Guelph. Passionate about full-stack development, hoping one day I
+              can create software to help others. My current favourite stack is
+              the T3 stack (Next.js, TypeScript, RSCs, Tailwind CSS, Drizzle).
             </p>
           </Up>
           <Up delay={0.6}>
@@ -51,11 +50,11 @@ const Home = () => {
           </Up>
           <Up delay={0.7}>
             <p className="my-6">
-              Outside of programming, I enjoy lifting weights sometimes. I like
-              playing sports - even though I&apos;m not the best at them.
-              I&apos;ve recently gotten into reading, and I don&apos;t think
-              I&apos;ll stop any time soon. I&apos;m also a big fan of anime 🍖
-              and k-dramas, recommend me some!
+              Outside of programming, I enjoy lifting weights, and I like
+              playing sports like basketball and volleyball. I&apos;ve recently
+              gotten into reading, and I don&apos;t think I&apos;ll stop any
+              time soon. I&apos;m also a big fan of anime 🍖, manga 📙, and
+              k-dramas 📺, recommend me some!
             </p>
           </Up>
         </article>
