@@ -18,10 +18,10 @@ const Projects = () => {
 
         <div className="flex justify-center">
           <ProjectCard
-            link=""
-            title="typia"
-            description="Online browser-based multiplayer typing game"
-            logoSrc="/typia.png"
+            link="https://github.com/L-Michael1/Matcha"
+            title="Matcha"
+            description="Productivity website focused on habit tracking and goal management"
+            logoSrc="/plant.png"
           />
         </div>
       </Up>
