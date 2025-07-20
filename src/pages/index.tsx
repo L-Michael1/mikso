@@ -45,7 +45,7 @@ const Home = () => {
           </Up>
           <Up delay={0.6}>
             <p className="my-6">
-              I&apos;m currently looking for a entry-level full-time software
+              I&apos;m currently looking for an entry-level full-time software
               engineering position.
             </p>
           </Up>
