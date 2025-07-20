@@ -10,6 +10,7 @@ import {
   SiGrafana,
   SiVercel,
   SiJira,
+  SiExpo,
 } from "react-icons/si";
 import {
   BiLogoGoLang,
@@ -22,6 +23,8 @@ import {
   BiLogoGithub,
   BiLogoGitlab,
   BiLogoPython,
+  BiLogoGraphql,
+  BiLogoDocker,
 } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -39,16 +42,16 @@ export const languages: iSkillProps[] = [
     icon: <TbBrandTypescript size={24} />,
   },
   {
+    name: "Go",
+    icon: <BiLogoGoLang size={24} />,
+  },
+  {
     name: "Python",
     icon: <BiLogoPython size={24} />,
   },
   {
-    name: "C/C++",
+    name: "C",
     icon: <SiCplusplus size={24} />,
-  },
-  {
-    name: "Golang",
-    icon: <BiLogoGoLang size={24} />,
   },
   {
     name: "Java",
@@ -70,16 +73,24 @@ export const languages: iSkillProps[] = [
 
 export const frameworks: iSkillProps[] = [
   {
-    name: "Next.js",
-    icon: <TbBrandNextjs size={24} />,
+    name: "React/React Native",
+    icon: <BiLogoReact size={24} />,
   },
   {
-    name: "React",
-    icon: <BiLogoReact size={24} />,
+    name: "GraphQL",
+    icon: <BiLogoGraphql size={24} />,
+  },
+  {
+    name: "Expo",
+    icon: <SiExpo size={24} />,
   },
   {
     name: "TailwindCSS",
     icon: <BiLogoTailwindCss size={24} />,
+  },
+  {
+    name: "Next.js",
+    icon: <TbBrandNextjs size={24} />,
   },
   {
     name: "Node.js",
@@ -107,6 +118,10 @@ export const tools: iSkillProps[] = [
   {
     name: "Git",
     icon: <BiGitBranch size={24} />,
+  },
+  {
+    name: "Docker",
+    icon: <BiLogoDocker size={24} />,
   },
   {
     name: "Github Actions",

@@ -38,13 +38,14 @@ const Home = () => {
             <p className="my-6">
               I&apos;m a recent Computer Science graduate from the University of
               Guelph. Passionate about full-stack development, hoping one day I
-              can create software to help others. My current favourite stack is
-              the T3 stack (Next.js, TypeScript, RSCs, Tailwind CSS, Drizzle).
+              can create software to help others. I&apos;ve recently been
+              building a mobile fitness app to track a user&apos;s workouts and
+              connect them with their favourite fitness influencers.
             </p>
           </Up>
           <Up delay={0.6}>
             <p className="my-6">
-              I&apos;m currently looking for a new grad full-time software
+              I&apos;m currently looking for a entry-level full-time software
               engineering position.
             </p>
           </Up>
@@ -54,7 +55,7 @@ const Home = () => {
               playing sports like basketball and volleyball. I&apos;ve recently
               gotten into reading, and I don&apos;t think I&apos;ll stop any
               time soon. I&apos;m also a big fan of anime 🍖, manga 📙, and
-              k-dramas 📺, recommend me some!
+              k-dramas 📺.
             </p>
           </Up>
         </article>
@@ -88,7 +89,7 @@ const Home = () => {
                 MIT
               </span>{" "}
             </a>
-            2023 mikso
+            2025 mikso
           </p>
         </Up>
       </div>
